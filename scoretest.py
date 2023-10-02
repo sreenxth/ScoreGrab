@@ -1,15 +1,12 @@
 import tkinter
-from tkinter import ttk,font
-from PIL import Image, ImageTk, ImageFont
+from tkinter import ttk
+from PIL import Image, ImageTk
 from datetime import datetime,timedelta
 import json
 import time
 import requests
 import tzlocal
 import pytz
-import pyglet
-
-
 
 #GETTING DATE RANGE FOR QUERY
 datetodayt = time.strftime("%Y-%m-%d")
@@ -60,16 +57,15 @@ def scroll_y(*args):
 
 def homescreentoday():
         #loading data ffrom api
-#        req_gamestoday=requests.get(f"https://www.balldontlie.io/api/v1/games?start_date={daterange[0]}&end_date={daterange[1]}") #actual function line
+        #req_gamestoday=requests.get(f"https://www.balldontlie.io/api/v1/games?start_date={daterange[0]}&end_date={daterange[1]}")actual function line
         req_gamestoday=requests.get(f"https://www.balldontlie.io/api/v1/games?start_date=2023-05-25&end_date=2023-10-25") #testing line
         games=req_gamestoday.json()
+
         #screen when no games are played
         if games["data"]==[]:
-        
-            
             #displaying current time
             now=time.localtime()
-            strnow = time.strftime("%b %d, %Y  %H:%M:%S %Z",now)
+            strnow = time.strftime("%b %d, %Y  %H:%M:%S",now)
             timeupdate=tkinter.Label(window, text=f"Last Updated on:\n{strnow}",font=("Kanit Thin", "14"),bg="black",fg="#949494")
             
             #notice
@@ -224,7 +220,7 @@ def homescreentoday():
             
             #update time disp
             now=time.localtime()
-            strnow = time.strftime("   %b %d, %Y  %H:%M:%S %Z",now)
+            strnow = time.strftime("   %b %d, %Y  %H:%M:%S",now)
             timeupdate=tkinter.Label(scrollframe, text=f"   Last Updated on:\n{strnow}",font=("Kanit Thin", "14"),bg="#303030",fg="white",anchor='center',width=50,padx=16)
             timeupdate.grid(row=i+2,columnspan=3,sticky="w")
             
@@ -237,15 +233,12 @@ def homescreentoday():
             
 
 
-
 #HOME SCREEN
 window=tkinter.Tk()
 window.title("ScoreGrab")
-window.geometry("500x850")
+window.geometry("555x850")
 window.configure(bg="black")
 window.resizable(False, False)
-
-
 
 #app icon image
 icon=Image.open("images/icon.png")
@@ -255,21 +248,20 @@ window.iconphoto(True,icondisp)
 
 #statgrab iamge
 timage = Image.open("images/homeheader.jpg")
-nimage=timage.resize((502,73),resample=Image.LANCZOS)
+nimage=timage.resize((555,81),resample=Image.LANCZOS)
 image=ImageTk.PhotoImage(nimage)
-toptitle = tkinter.Label(window,image=image,highlightthickness=0,borderwidth=0,width=498)
+toptitle = tkinter.Label(window,image=image,highlightthickness=0,borderwidth=0,width=555)
 
 #scroll implemnetation
 canvas = tkinter.Canvas(window, bg="black", highlightthickness=0)
-canvas.place(x=0, y=71, width=485, height=750)
+canvas.place(x=0, y=71, width=537, height=750)
 
 scrollbar = tkinter.Scrollbar(window, orient="vertical", command=scroll_y)
-scrollbar.place(x=485, y=71, height=750)
+scrollbar.place(x=537, y=71, height=750)
 
 canvas.configure(yscrollcommand=scrollbar.set)
 scrollframe = tkinter.Frame(canvas, bg="black")
 canvas.create_window((0, 0), window=scrollframe, anchor="nw")
-
 
 #refresh icon image
 tref = Image.open("images/refresh.png")
