@@ -1,0 +1,29 @@
+{
+  "id": 1011167,
+  "date": "2023-06-07 00:00:00 UTC",
+  "home_team": {
+    "id": 16,
+    "abbreviation": "MIA",
+    "city": "Miami",
+    "conference": "East",
+    "division": "Southeast",
+    "full_name": "Miami Heat",
+    "name": "Heat"
+  },
+  "home_team_score": 94,
+  "period": 4,
+  "postseason": true,
+  "season": 2022,
+  "status": "Final",
+  "time": "Final",
+  "visitor_team": {
+    "id": 8,
+    "abbreviation": "DEN",
+    "city": "Denver",
+    "conference": "West",
+    "division": "Northwest",
+    "full_name": "Denver Nuggets",
+    "name": "Nuggets"
+  },
+  "visitor_team_score": 109
+}
