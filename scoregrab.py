@@ -7,7 +7,6 @@ import time
 import requests
 import tzlocal
 import pytz
-import pyglet
 
 
 
