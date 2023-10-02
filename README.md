@@ -2,6 +2,7 @@
 Live NBA Scores
 
 ----------------------IMPORTANT--------------------------
+
 Libraries required:
 Pillow
 requests
@@ -12,6 +13,7 @@ pytz
 *****PLEASE DOWNLOAD THE 5 KANIT FONTS I HAVE PROVIDED FOR THE BEST EXPERIENCE*****
 
 ----------------------------------------------------------
+
 **NOTE FOR THE TESTERS**
 Hey!
 This is a simple python application which uses the tkinter module to neatly display the live scores of NBA games. 
