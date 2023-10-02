@@ -1,5 +1,6 @@
 # ScoreGrab
-Live NBA Scores\n
+Live NBA Scores
+
 ----------------------IMPORTANT--------------------------
 Libraries required:
 Pillow
