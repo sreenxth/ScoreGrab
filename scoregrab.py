@@ -57,7 +57,7 @@ def scroll_y(*args):
 
 def homescreentoday():
         #loading data ffrom api
-        req_gamestoday=requests.get(f"https://www.balldontlie.io/api/v1/games?start_date={daterange[0]}&end_date={daterange[1]}")actual function line
+        req_gamestoday=requests.get(f"https://www.balldontlie.io/api/v1/games?start_date={daterange[0]}&end_date={daterange[1]}") #actual function line
         #req_gamestoday=requests.get(f"https://www.balldontlie.io/api/v1/games?start_date=2023-05-25&end_date=2023-10-25") #testing line
         games=req_gamestoday.json()
 
